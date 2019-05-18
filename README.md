@@ -1,3 +1,3 @@
-# Docker alias and functions
+# Docker aliases and functions
 
-#### Useful command line alias for Docker. This is for my usage.
+#### Useful command line aliases for Docker. This is for my usage.

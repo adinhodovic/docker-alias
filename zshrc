@@ -1,8 +1,8 @@
 # ------------------------------------
-# Docker alias and function
+# Docker aliases and functions
 # ------------------------------------
 
-################### Docker ######################33#
+##### Alias
 
 # Execute interactive container, e.g., $dex ansible /bin/bash
 alias dex="docker exec -i -t"
@@ -31,7 +31,7 @@ alias dpsa="docker ps -a"
 # Stop and Remove all containers
 alias dsrm='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
 
-#"""""""""""""""""" Docker Functions """"""""""""""""""
+##### Functions
 
 # Show all alias related docker
 dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g" | sort; }
@@ -51,11 +51,14 @@ drm() { docker rm $(docker ps -a -q); }
 # Zsh into running container
 dzsh() { docker exec -it $(docker ps -aqf "name=$1") /bin/zsh; }
 
-################### Docker Images ####################
+# ------------------------------------
+# Docker Image aliases and functions
+# ------------------------------------
 
 # Get images
 alias di="docker images"
 
-#"""""""""""""""""" Docker Image Functions """"""""""""""""""
+###### Image Functions
+
 # Remove all images
 dirm() { docker rmi $(docker images -q); }
