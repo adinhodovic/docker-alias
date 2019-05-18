@@ -10,10 +10,10 @@ alias dex="docker exec -i -t"
 # Run container
 alias dr="docker run"
 
-# Run deamonized container, e.g., $dkd base /bin/echo hello
+# Run deamonized container, e.g., $drd base /bin/echo hello
 alias drd="docker run -d -P"
 
-# Run interactive container, e.g., $dki base /bin/bash
+# Run interactive container, e.g., $dri base /bin/bash
 alias dri="docker run -i -t -P"
 
 # Get container IP
@@ -31,7 +31,7 @@ alias dpsa="docker ps -a"
 # Stop and Remove all containers
 alias dsrm='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
 
-"""""""""""""""""" Docker Functions """"""""""""""""""
+#"""""""""""""""""" Docker Functions """"""""""""""""""
 
 # Show all alias related docker
 dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g" | sort; }
@@ -56,6 +56,6 @@ dzsh() { docker exec -it $(docker ps -aqf "name=$1") /bin/zsh; }
 # Get images
 alias di="docker images"
 
-"""""""""""""""""" Docker Image Functions """"""""""""""""""
+#"""""""""""""""""" Docker Image Functions """"""""""""""""""
 # Remove all images
-dri() { docker rmi $(docker images -q); }
+dirm() { docker rmi $(docker images -q); }
