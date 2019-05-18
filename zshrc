@@ -1,5 +1,5 @@
 # ------------------------------------
-# Docker aliases and functions
+# Docker aliases
 # ------------------------------------
 
 ##### Alias
@@ -52,7 +52,7 @@ drm() { docker rm $(docker ps -a -q); }
 dzsh() { docker exec -it $(docker ps -aqf "name=$1") /bin/zsh; }
 
 # ------------------------------------
-# Docker Image aliases and functions
+# Docker Image aliases
 # ------------------------------------
 
 # Get images
