@@ -5,7 +5,7 @@
 ##### Alias
 
 # Execute interactive container, e.g., $dex ansible /bin/bash
-alias dex="docker exec -i -t"
+alias deit="docker exec -i -t"
 
 # Run container
 alias dr="docker run"
